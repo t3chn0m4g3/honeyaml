@@ -77,7 +77,7 @@
   path_type: rest
   method: POST
   auth_required: true
-  return_code: 204
+  return_code: 200
   return_text: ""
 
 - path: /users/forgot-password
@@ -120,7 +120,7 @@
       "post_id": 3
     }
 
-- path: /posts/posts/post_id
+- path: /posts/posts/1
   path_type: rest
   method: GET
   auth_required: false
@@ -132,7 +132,7 @@
       "content": "This is the content of the first post."
     }
 
-- path: /posts/post_id
+- path: /posts
   path_type: rest
   method: PUT
   auth_required: true
@@ -142,11 +142,11 @@
       "message": "Post updated successfully"
     }
 
-- path: /posts/post_id
+- path: /posts/posts/1
   path_type: rest
   method: DELETE
   auth_required: true
-  return_code: 204
+  return_code: 202
   return_text: ""
 
 - path: /comments
@@ -194,7 +194,7 @@
       }
     ]
 
-- path: /products/products/product_id
+- path: /products/products/1
   path_type: rest
   method: GET
   auth_required: false
@@ -207,7 +207,7 @@
       "price": 9.99
     }
 
-- path: /products/product_id/reviews
+- path: /products/1/reviews
   path_type: rest
   method: GET
   auth_required: false
@@ -250,7 +250,7 @@
       "message": "Item added to cart"
     }
 
-- path: /cart/items/cart/items/item_id
+- path: /cart/items/cart/items/1
   path_type: rest
   method: DELETE
   auth_required: true
@@ -285,7 +285,7 @@
       }
     ]
 
-- path: /orders/orders/order_id
+- path: /orders/orders/12345
   path_type: rest
   method: GET
   auth_required: true
@@ -302,7 +302,7 @@
       ]
     }
 
-- path: /orders/order_id/cancel
+- path: /orders/12345/cancel
   path_type: rest
   method: POST
   auth_required: true
@@ -323,7 +323,7 @@
       "message": "Support ticket created"
     }
 
-- path: /support/tickets/support/tickets/ticket_id
+- path: /support/tickets/support/tickets/789
   path_type: rest
   method: GET
   auth_required: true
@@ -340,7 +340,7 @@
       ]
     }
 
-- path: /support/tickets/ticket_id/reply
+- path: /support/tickets/789/reply
   path_type: rest
   method: POST
   auth_required: true
@@ -364,7 +364,7 @@
       }
     ]
 
-- path: /notifications/notifications/notification_id
+- path: /notifications/notifications/1
   path_type: rest
   method: DELETE
   auth_required: true
@@ -417,7 +417,7 @@
   path_type: rest
   method: GET
   auth_required: false
-  return_code: 200
+  return_code: 201
   return_text: |
     <html>
     <body>Authenticate through /auth first.</body>
