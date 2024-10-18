@@ -1,6 +1,7 @@
 /target
 /dev
 /logs
+log/
 honeyaml.log.*
 report.json
 /docker/ctx
