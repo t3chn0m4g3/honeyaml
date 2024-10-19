@@ -1,11 +1,11 @@
 services:
   honeyaml:
     build: .
-    image: dtagdevsec/honeyaml:testing
+    image: honeyaml:latest
     read_only: true
     container_name: honeyaml
     restart: always
     ports:
       - "8080:8080"
     volumes:
-      - ./log/:/honeyaml/logs/
+      - ./log/:/opt/honeyaml/log/
